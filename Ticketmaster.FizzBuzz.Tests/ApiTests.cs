@@ -58,7 +58,7 @@ namespace Ticketmaster.FizzBuzz.Tests
             var result = _target.AddRule(ruleToAdd);
 
             Assert.IsNotNull(result);
-            var response = result as CreatedAtRouteNegotiatedContentResult<Rule>;
+            var response = result as CreatedNegotiatedContentResult<Rule>;
             Assert.IsNotNull(response);
             Assert.AreEqual(ruleToAdd.Index, response.Content.Index);
             Assert.AreEqual(ruleToAdd.Word, response.Content.Word);
